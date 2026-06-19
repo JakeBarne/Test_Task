@@ -1,0 +1,20 @@
+﻿<Window x:Class="TestTask.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:view="clr-namespace:TestTask.View"
+        Title="Тестовое задание" Height="520" Width="860"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Сотрудники">
+                <view:EmployeesView DataContext="{Binding EmployeesVm}"/>
+            </TabItem>
+            <TabItem Header="Контрагенты">
+                <view:ContractorsView DataContext="{Binding ContractorsVm}"/>
+            </TabItem>
+            <TabItem Header="Заказы">
+                <view:OrdersView DataContext="{Binding OrdersVm}"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
